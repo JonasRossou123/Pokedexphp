@@ -1,4 +1,7 @@
+
 <?php
+error_reporting(E_ALL); ini_set("display_errors", 1);
+
 $world = "hello world";
 echo "hello world!";
 ?>
@@ -21,11 +24,11 @@ echo "hello world!";
 
 <?php
 //convert json data to string
-$api= file_get_contents ('https://pokeapi.co/api/v2/pokemon')
-echo json_encode($api)
+$api = file_get_contents ('https://pokeapi.co/api/v2/pokemon/1');
+$api = utf8_encode($api);
+$jason = json_decode ($api,true);
+var_dump($jason);
 //convert to json string and back to array
-
-
 ?>
 
 <?php
