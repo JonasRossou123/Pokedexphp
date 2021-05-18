@@ -1,12 +1,3 @@
-
-<?php
-error_reporting(E_ALL); ini_set("display_errors", 1);
-
-$world = "hello world";
-echo "hello world!";
-?>
-
-
 <!doctype html>
 <html lang="en">
 <head>
@@ -18,38 +9,55 @@ echo "hello world!";
     <title>Document</title>
 </head>
 <body>
-<h1><?php echo $world?></h1>
-<p><?php var_dump($_GET); ?></p>
-<p><?php var_dump($_GET["id"]); ?></p>
+
 
 <?php
-//convert json data to string
-$api = file_get_contents ('https://pokeapi.co/api/v2/pokemon/1');
-$api = utf8_encode($api);
-$jason = json_decode ($api,true);
-var_dump($jason);
-//convert to json string and back to array
+//Code won't run until something's filled in
+if (isset($_GET['pokemon'])) {
+
+//pokemon added at the end of the link
+    $api = 'https://pokeapi.co/api/v2/pokemon/'.$_GET['pokemon'];
+//link to the Pokémon it has evolved from
+    $apiEvolution = 'https://pokeapi.co/api/v2/pokemon-species/'.$_GET['pokemon'];
+
+//file_get_contents -> Reads entire file into a string
+    $apistring = file_get_contents($api, true);
+//idem other link
+    $apiEvolutionstring = file_get_contents($apiEvolution, true);
+
+//Takes a JSON encoded string and converts (=decode) it into a PHP variable.
+    $pokemonData = json_decode($apistring, true);
+//idem other link
+    $pokemonEvolution = json_decode($apiEvolutionstring, true);
+
+    $pokemon_name = $pokemonData['name'];
+    $pokemon_id = $pokemonData['id'];
+    $pokemon_image = $pokemonData['sprites']['front_default'];
+    $pokemon_evolved = $pokemonEvolution['evolves_from_species']['name'];
+    $pokemon_type = '';
+
+}
 ?>
 
-<?php
-pre_r($_POST);
-?>
 
-
+//pre_r($_POST);
 
 <p>WIE IS DEZE POKEMON?</p>
-<form class="search-poke" action="" method="POST">
-    <input type="text" name="pokemon" placeholder="Enter Pokémon">
-    <input type="text" name="id" placeholder="Enter ID">
-    <input type="submit" name="submit" value="Search">
+<form class="search-poke" action="">
+    <input type="text" name="pokemon" placeholder="Enter Pokémon or ID">
+        <input type="submit" name="submit" value="Search">
 </form>
+
+
+
+<?php echo $pokemon_name ?><br>
+<?php echo $pokemon_evolved ?>
+
 </body>
 </html>
 
-<?php
-function pre_r ($array) {
-    echo'<pre>';
-    print_r($array);
-    echo '</pre>';
-}
-?>
+//function pre_r ($array) {
+    //echo'<pre>';
+    //print_r($array);
+    //echo '</pre>';
+//}
