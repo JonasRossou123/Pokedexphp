@@ -1,0 +1,595 @@
+
+
+body{
+    background-image: url("https://i.pinimg.com/originals/7c/67/8b/7c678bffd31dc92dc80d95d471b0e83d.png");
+    width:100%
+}
+
+
+
+#global{
+    width:1120px;
+    height: 800px;
+    display: flex;
+    margin: 50px auto;
+    }
+
+#containerleft{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+#bluebutton{
+    width: 90px;
+    height:90px;
+    top:32px;
+    left:26px;
+    border-radius:50px;
+    background-color: #2978b5;
+    border-style: ridge;
+    position: relative;
+    box-shadow: 2px 2px;
+}
+
+#whitebutton{
+    width: 20px;
+    height:20px;
+    top:15px;
+    left: 15px;
+    border-radius:50px;
+    background-color: #8ab6d6;
+    position: absolute;
+}
+
+#red{
+    width: 10px;
+    height: 10px;
+    top:20px;
+    left: 130px;
+    border-radius:50px;
+    background-color: darkred;
+    border: 1px solid black;
+    position: absolute;
+}
+
+#yellow{
+    width: 10px;
+    height:10px;
+    top:20px;
+    left: 150px;
+    border-radius:50px;
+    background-color: #f7ea00;
+    border: 1px solid black;
+    position: absolute;
+}
+
+#green{
+    width: 10px;
+    height:10px;
+    top:20px;
+    left: 170px;
+    border-radius:50px;
+    background-color: #9ede73;
+    border: 1px solid black;
+    position: absolute;
+}
+
+#leftup{
+    width: 550px;
+    height: 175px;
+    background-color: #e21639;
+    border-left: 5px solid black;
+    border-top: 5px solid black;
+    border-right: 5px solid black;
+    position: relative;
+    border-top-left-radius: 10px;
+    left:0;
+    right:0;
+}
+
+#pseudo1{
+    background-color: #e61515;
+    width: 250px;
+    height: 80px;
+    transform: skew(-30deg);
+
+
+    border-left: 5px solid black;
+    border-top: 5px solid black;
+
+    position : absolute;
+    top: 95px;
+    right:20px;
+
+    z-index: 5000;
+}
+
+#pseudo2{
+    background-color: #e61515;
+    width: 70px;
+    height: 80px;
+    border-top: 5px solid black ;
+    position : absolute;
+    top: 95px;
+    right:0;
+    z-index: 5000;
+}
+
+
+
+
+
+#left{
+    width:550px;
+    height: 625px;
+    background-color: #e61515;
+    border-bottom: 5px solid black;
+    border-left: 5px solid black;
+    border-right: 5px solid black;
+    position: relative;
+    left:0;
+    right:0;
+    border-bottom-left-radius: 10px;
+}
+
+#leftpart1{
+
+    height: 300px;
+    margin-top: 1px;
+    border-top: 5px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    left:0;
+
+    position: relative;
+}
+
+#whitewrapper{
+    margin-top: 50px;
+    background-color: white;
+    width: 380px;
+    height: 300px ;
+    display: flex;
+    justify-content: center;
+    align-items: center ;
+    position: relative;
+    border:5px solid black;
+    border-radius: 0 0 0 45px;
+
+}
+
+#redbutton1{
+    width: 10px;
+    height:10px;
+    top:10px;
+    left: 190px;
+    border-radius:50px;
+    background-color: red;
+    border: 1px solid black;
+    position: absolute;
+}
+
+#redbutton2{
+    width: 10px;
+    height:10px;
+    top:10px;
+    left: 170px;
+    border-radius:50px;
+    background-color: red;
+    border: 1px solid black;
+    position: absolute;
+}
+
+#stylepicturepoke{
+    top: 50%;
+    width: 325px;
+    height: 220px;
+    background-color: darkseagreen;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    border: 2px solid black;
+    margin-bottom: 10px;
+    }
+
+#redbutton3{
+    width: 20px;
+    height:20px;
+    top:260px;
+    left: 40px;
+    border-radius:50px;
+    background-color: red;
+    border: 1px solid black;
+    position: absolute;
+}
+
+#stripes{
+    width: 25px;
+    height:30px;
+    position: absolute;
+    top: 258px;
+    left:305px;
+}
+
+hr { margin: 3px 0 3px 0;}
+
+#leftpart2{
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    left:0;
+    margin-top: 20px;
+}
+
+.button {
+    background-color: #ddd;
+    border: none;
+    color: black;
+    width: 40px;
+    height: 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    margin: 4px 2px;
+    border-radius: 16px;
+}
+
+.button1 {
+    background-color: cornflowerblue;
+    border: none;
+    color: black;
+    width: 40px;
+    height: 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    margin: 4px 2px;
+    border-radius: 16px;
+}
+
+#leftpart3{
+    height: 275px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    left:0;
+    bottom: 20px;
+    }
+
+#wrappercircle{
+    position: relative;
+    }
+
+#circleone{
+    left: -130px;
+    top: -50px;
+    width: 40px;
+    height:40px;
+    border-radius:50px;
+    background-color: black;
+    border-bottom: grey;
+    box-shadow: 2px 2px yellow;
+    position: absolute;
+}
+
+#circletwo{
+    width:40px;
+    height:40px;
+    border-radius:50px;
+    background-color: black;
+    border-bottom: grey;
+    box-shadow: 2px 2px yellow;
+    position: absolute;
+    left: -90px;
+    top: -90px;
+}
+
+#wrappernameid{
+    top: 50%;
+    width: 200px;
+    height: 100px;
+    background-color: dimgrey;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    border-radius: 10px;
+    border: 2px solid black;
+}
+
+#id{
+    font-size: 18px;
+    color:beige;
+    margin: 0;
+    font-family: "Courier New", monospace;
+    font-weight: bold;
+
+}
+
+#name{
+    font-size: 18px;
+    color:beige;
+    margin: 0;
+    font-family: "Courier New", monospace;
+    font-weight: bold;
+}
+
+#wrapperx{
+    font-size: 90px;
+    margin-bottom: 90px;
+    position: absolute;
+}
+
+#x{
+    text-shadow: 2px 2px yellow;
+    border-bottom: grey;
+    right: -200px;
+    position: absolute;
+    top: -60px;
+    }
+
+#image{
+    margin: 0 auto;
+    text-indent:-9999px
+}
+
+#middle{
+position: relative;
+}
+
+#rowodd1{
+    background-color: grey;
+    height: 20px;
+    width: 20px;
+    border-top: 5px solid black;
+    border-bottom: 5px solid black;
+    background: linear-gradient(90deg, #891313 0, #b31818 30%, #e61515 45%, #fd5555 65%, #e61515 95%);
+    border-top-right-radius: 10px;
+    border-right: 5px solid black;
+}
+
+.roweven{
+    height: 240px;
+    width: 20px;
+    background-color: grey;
+    background: linear-gradient(90deg, #891313 0, #b31818 30%, #e61515 45%, #fd5555 65%, #e61515 95%);
+    border-right: 5px solid black;
+    }
+
+.rowodd {
+    background-color: grey;
+    height: 20px;
+    width: 20px;
+    border-top: 5px solid black;
+    border-bottom: 5px solid black;
+    border-right: 5px solid black;
+    background: linear-gradient(90deg, #891313 0, #b31818 30%, #e61515 45%, #fd5555 65%, #e61515 95%);
+}
+
+#containerright{
+    display: flex;
+    flex-direction: column;
+    }
+
+#rightup{
+    width: 550px;
+    height: 100px;
+    background-color: transparent;
+
+
+}
+
+
+
+#right::before{
+    content: '';
+    background-color: #7acaf9;
+    width: 250px;
+    height: 79px;
+    transform: skew(30deg);
+    border-left: 5px solid black;
+    border-bottom: 5px solid black;
+    border-top: 0px solid yellow;
+    position : absolute;
+    top: -5px;
+    right: 40px;
+}
+
+#right::after{
+    content: '';
+    background-color: #7acaf9;
+    width: 150px;
+    height: 80px;
+    border-right: 0px solid blue;
+    border-bottom: 5px solid black;
+    position : absolute;
+    top: -5px;
+    right:-5px;
+}
+
+#right{
+    width:550px;
+    height: 700px;
+    background-color: #e61515;
+    border-bottom:5px solid black;
+    border-right:5px solid black;
+    border-top:5px solid black;
+    position: relative;
+    border-bottom-right-radius: 10px;
+}
+
+
+
+#rightpart1{
+    height: 75px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+#rightpart2{
+    height: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+#pokemon{
+    font-size: 18px;
+    color:beige;
+    margin: 0;
+    font-family: "Courier New", monospace;
+    font-weight: bold;
+    background-color: dimgrey;
+    border-radius: 10px;
+    margin-top:13px;
+    border: 2px solid black;
+    text-align: center;
+}
+
+#pokemon:focus {
+    outline:0;
+}
+
+#pokemon::placeholder{
+    font-size: 18px;
+    color:beige;
+    margin: 0;
+    font-family: "Courier New", monospace;
+    font-weight: bold;
+    text-align: center;
+}
+
+#run{
+    background-color: dimgrey;
+    font-size: 18px;
+    color:beige;
+    margin: 0;
+    font-family: "Courier New", monospace;
+    font-weight: bold;
+    border-radius: 10px;
+    margin-top:13px;
+    border: 2px solid black;
+}
+
+#run:focus {
+    outline:0;
+}
+
+#rightpart3{
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+#stylemoves{
+    top: 50%;
+    width: 325px;
+    height: 170px;
+    background-color: dimgrey;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 2px solid black;
+    border-radius: 10px;
+}
+
+#moves{
+    font-size: 18px;
+    color:beige;
+    margin: 0;
+    font-family: "Courier New", monospace;
+    font-weight: bold;
+}
+
+#rightpart4{
+    height: 75px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+#dhidden{
+    display:none;
+    font-size: 18px;
+    color:beige;
+    margin: 0;
+    font-family: "Courier New", monospace;
+    font-weight: bold;
+       }
+
+#evolve{
+    display: inline-flex;
+    font-size: 18px;
+    color:beige;
+    margin: 0;
+    font-family: "Courier New", monospace;
+    font-weight: bold;
+
+}
+
+
+
+#styleevolve{
+    top: 50%;
+    width: 425px;
+    height: 50px;
+    background-color: lightskyblue;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    border-radius: 10px;
+    border: 2px solid black;
+}
+
+#phidden{
+    content: "This Pokémon once was a: "
+}
+
+#rightpart5{
+    height: 130px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+#stylepictureevolve{
+    top: 50%;
+    width: 225px;
+    height: 120px;
+    background-color: darkseagreen;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    margin-top: 22px;
+    border: 2px solid black;
+}
+#imageevolve{
+
+    text-indent:-9999px;
+}
+
+
+#rightpart6{
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+div{
+    display: block;
+    box-sizing: border-box;
+}

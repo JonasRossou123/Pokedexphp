@@ -28,12 +28,21 @@ if (isset($_GET['pokemon'])) {
 //idem other link
     $pokemonEvolution = json_decode($apiEvolutionstring, true);
 
+//array to variable
     $pokemon_name = $pokemonData['name'];
     $pokemon_id = $pokemonData['id'];
     $pokemon_image = $pokemonData['sprites']['front_default'];
-    $pokemon_evolved = $pokemonEvolution['evolves_from_species']['name'];
+    if ($pokemonEvolution['evolves_from_species'] === null){
+        echo "x";
+    }
+    else {
+        $pokemon_evolved = $pokemonEvolution['evolves_from_species']['name'];
+    }
 } ?>
 
+
+<!--html starts here-->
+<!--if (isset($_GET['pokemon'] is being used to counter the errors of no input-->
 <div id="global">
     <div id="containerleft">
         <div id="leftup">
@@ -50,7 +59,10 @@ if (isset($_GET['pokemon'])) {
                     <div id="redbutton1"> </div>
                     <div id="redbutton2"> </div>
                     <div id="stylepicturepoke">
-                        <img id="image" src='<?php if (isset($_GET['pokemon'])) { echo $pokemon_image;} else{} ?>' alt="ready to display" width="200" height="200" >
+                        <?php if (isset($_GET['pokemon'])) {?>
+                            <img id="image" src='<?php echo $pokemon_image;?>' alt="ready to display" width="200" height="200" >
+                        <?php } ?>
+
                     </div>
                     <div id="redbutton3"></div>
                     <div id="stripes"><hr color="black"><hr color="black"><hr color="black"><hr color="black"><hr color="black"></div>
@@ -104,6 +116,8 @@ if (isset($_GET['pokemon'])) {
                 <div id="stylemoves">
                     <ul id="moves">
                         <?php
+                        //we use a for loop to fill iin the ul
+                        //we used an extra if to counter the Pokémons that doesn't count at least 4 moves
                         if (isset($_GET['pokemon'])) {
                             $count = count($pokemonData["moves"]);
                             if ($count > 4){
@@ -122,7 +136,7 @@ if (isset($_GET['pokemon'])) {
                     <marquee behavior="scroll" direction="left">
                        <div id="evolve"> <?php
                            if (isset($_GET['pokemon'])) {
-                        if ($pokemon_evolved === null) {
+                        if ($pokemonEvolution['evolves_from_species'] === null) {
                             echo 'This Pokémon has not been evolved yet';
                         }
                         else {
@@ -136,7 +150,7 @@ if (isset($_GET['pokemon'])) {
                 <div id="stylepictureevolve">
                     <?php
                     if (isset($_GET['pokemon'])) {
-                    if ($pokemon_evolved === null) {
+                    if ($pokemonEvolution['evolves_from_species'] === null) {
                         echo '';
                     } else {
                         //link to the picture of the Pokémon it has evolved from
