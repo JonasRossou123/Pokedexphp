@@ -3,7 +3,7 @@
 body{
     background-image: url("https://i.pinimg.com/originals/7c/67/8b/7c678bffd31dc92dc80d95d471b0e83d.png");
     width:100%
-}
+    }
 
 
 
@@ -451,6 +451,7 @@ position: relative;
     margin-top:13px;
     border: 2px solid black;
     text-align: center;
+    line-height: 1.5;
 }
 
 #pokemon:focus {
@@ -476,6 +477,7 @@ position: relative;
     border-radius: 10px;
     margin-top:13px;
     border: 2px solid black;
+    line-height: 1.5;
 }
 
 #run:focus {
@@ -500,6 +502,7 @@ position: relative;
     align-items: center;
     border: 2px solid black;
     border-radius: 10px;
+
 }
 
 #moves{
@@ -508,6 +511,7 @@ position: relative;
     margin: 0;
     font-family: "Courier New", monospace;
     font-weight: bold;
+    line-height: 2;
 }
 
 #rightpart4{
