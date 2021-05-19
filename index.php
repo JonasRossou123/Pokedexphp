@@ -11,6 +11,11 @@
 <body>
 
 <?php
+//error logging
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL);
+
 //Code won't run until something's filled in
 if (isset($_GET['pokemon'])) {
 
@@ -19,28 +24,37 @@ if (isset($_GET['pokemon'])) {
 //link to the Pokémon it has evolved from
     $apiEvolution = 'https://pokeapi.co/api/v2/pokemon-species/' . $_GET['pokemon'];
 
+//checking if HTTP response is not OK or if search is NULL
+//if the search engine crashes you'll get a message and the api will return the first pokemon
+    $headers = get_headers($api, 1);
+     if ($headers[0] !=='HTTP/1.1 200 OK' || ($_GET['pokemon']) == NULL) {
+
+                echo "<h2>Enter a valid search</h2>";
+                $api = "https://pokeapi.co/api/v2/pokemon/1";
+                $apiEvolution = "https://pokeapi.co/api/v2/pokemon-species/1";
+            }
+
 //file_get_contents -> Reads entire file into a string
     $apistring = file_get_contents($api, true);
-//idem other link
+  //idem other link
     $apiEvolutionstring = file_get_contents($apiEvolution, true);
 //Takes a JSON encoded string and converts (=decode) it into a PHP variable.
     $pokemonData = json_decode($apistring, true);
 //idem other link
     $pokemonEvolution = json_decode($apiEvolutionstring, true);
 
+
 //array to variable
     $pokemon_name = $pokemonData['name'];
     $pokemon_id = $pokemonData['id'];
     $pokemon_image = $pokemonData['sprites']['front_default'];
     if ($pokemonEvolution['evolves_from_species'] === null){
-        echo "x";
+        echo "";
     }
     else {
         $pokemon_evolved = $pokemonEvolution['evolves_from_species']['name'];
-    }
-} ?>
-
-
+    }}
+?>
 <!--html starts here-->
 <!--if (isset($_GET['pokemon'] is being used to counter the errors of no input-->
 <div id="global">
@@ -69,8 +83,11 @@ if (isset($_GET['pokemon'])) {
                 </div>
             </div>
             <div id="leftpart2">
-                <button class="button1"></button>
-                <button class="button"></button>
+                <form class="randbut" action="" method="get">
+                    <button  type="submit" id="buttontje" class="button1" name="pokemon" value="<?php echo $pokemon_id-1 ?>"></button>
+                    <button  type="submit" id="buttontje" class="button" name="pokemon" value="<?php echo $pokemon_id+1 ?>"></button>
+                </form>
+
             </div>
             <div id="leftpart3">
                 <div id="wrappercircle">
